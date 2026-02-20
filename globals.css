@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #0B0F19; /* Dark Premium Background */
+  --card: #151A2D;        /* Lighter Card Background */
+  --primary: #3b82f6;     /* Electric Blue */
+  --accent: #06b6d4;      /* Neon Cyan */
+  --text-main: #ffffff;
+  --text-muted: #94a3b8;
+}
+
+body {
+  background: var(--background);
+  color: var(--text-main);
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Scrollbar Hide */
+.no-scrollbar::-webkit-scrollbar { display: none; }
+.no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+/* Custom Animations */
+@keyframes glow {
+  0% { box-shadow: 0 0 5px #3b82f650; }
+  50% { box-shadow: 0 0 20px #3b82f680; }
+  100% { box-shadow: 0 0 5px #3b82f650; }
+}
+
+.animate-glow {
+  animation: glow 3s infinite;
+}
